@@ -1,0 +1,10 @@
+- Vagrant
+ - Opscode Cookbook "apt" to cope with apt(8)
+ - Add USB Filter in case the JTAG/ST-Link needs it
+ - Provide cookbook for generic development packages (essentials)
+ - Provide cookbook for the ARM Toolchain (to be decided)
+- README.md
+ - Add Image of the STM32F429
+- Source
+ - Add initial build infrastructure
+ - Add an example project as a starting point
