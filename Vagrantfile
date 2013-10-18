@@ -13,6 +13,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     v.customize ['modifyvm', :id, '--usbehci', 'on']
   end
 
+  config.ssh.forward_agent = true
+
   config.vm.provision "chef_solo" do |chef|
     chef.add_recipe "proxy"
     chef.add_recipe "apt"
