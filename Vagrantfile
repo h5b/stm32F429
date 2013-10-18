@@ -17,6 +17,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe "proxy"
     chef.add_recipe "apt"
     chef.add_recipe "etc"
+    chef.add_recipe "stm32dev"
   end
 
 end
