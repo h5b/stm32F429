@@ -1,6 +1,5 @@
 - Vagrant
  - Add USB Filter in case the JTAG/ST-Link needs it
- - Provide cookbook for the ARM Toolchain (to be decided)
 - README.md
  - Add Image of the STM32F429
 - Source
