@@ -10,6 +10,7 @@
   - move "--prefix" to "../attributes/default.rb"
 
 - README.md
+ - Add Note: Update the submodules before running 'vagrant up'
  - Add Image of the STM32F429
 
 - Source
