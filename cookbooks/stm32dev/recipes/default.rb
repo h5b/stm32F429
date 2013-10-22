@@ -10,6 +10,8 @@ end
 Chef::Log.info("[Adding STM32 Toolchain Packages]")
 [
   "gcc-arm-none-eabi",
+  "libftdi-dev",
+  "libusb-1.0-0-dev",
 ].each do |p|
   package p
 end
