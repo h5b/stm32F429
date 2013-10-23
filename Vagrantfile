@@ -8,9 +8,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.hostname = "stm32-dev"
   config.vm.provider "virtualbox" do |v|
     v.name = "stm32-dev"
-    # Enable USB Support with EHCI
+    # Enable USB Support with EHCI and Device Filtering to support ST-LINK/V2
     v.customize ['modifyvm', :id, '--usb', 'on']
     v.customize ['modifyvm', :id, '--usbehci', 'on']
+    v.customize ['usbfilter', 'add', '0', '--target', :id, '--name', 'STM32 ST-Link', '--vendorid', '0x0483']
   end
 
   config.ssh.forward_agent = true

@@ -39,3 +39,18 @@ bash "install_openocd" do
     make && make install
     EOH
 end
+
+Chef::Log.info("[Adding udev Rule for ST-Link/V2 Programmer]")
+template "/etc/udev/rules.d/30-ftdi-JTAG.rules" do
+  source "30-ftdi-JTAG.rules"
+  mode "0644"
+  owner "root"
+  group "root"
+end
+
+Chef::Log.info("[Adding User 'vagrant' to group 'dialout']")
+group "dialout" do
+  action :modify
+  members "vagrant"
+  append true
+end

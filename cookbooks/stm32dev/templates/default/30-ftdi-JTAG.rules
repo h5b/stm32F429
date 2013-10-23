@@ -1,0 +1,6 @@
+### Provide Access to JTAG Devices for Group "dialout"
+
+# ST-Link/V2 of the stm32F429
+SUBSYSTEM!="usb_device", ACTION!="add", GOTO="stlink_end"
+ATTR{idVendor}=="0483", ATTR{idProduct}=="3748", MODE="660", GROUP="dialout"
+LABEL="stlink_end"
