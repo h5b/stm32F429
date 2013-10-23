@@ -4,7 +4,6 @@
    - chef.https_proxy = "http://$HOST:$PORT"
 
 - cookbooks/stm32dev/recipes/default.rb
-  - use Chef::Config[:file_cache_path] instead of "/tmp" directory
   - move "configure flags" to "../attributes/default.rb"
   - move "--prefix" to "../attributes/default.rb"
 

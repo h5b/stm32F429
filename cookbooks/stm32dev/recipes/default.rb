@@ -1,3 +1,5 @@
+cache_path  = Chef::Config[:file_cache_path]
+
 Chef::Log.info("[Adding Basic Development Packages]")
 [
   "build-essential",
@@ -16,22 +18,15 @@ Chef::Log.info("[Adding STM32 Toolchain Packages]")
   package p
 end
 
-# XXX FIXME
-#
-# o Get rid of unsafe "/tmp" directory which isn't reboot-safe
-# o Currently "Chef::Config[:file_cache_path]" seems to be undefined
-#   for unknown reasons. "No such file or directory -
-#   Chef::Config[:file_cache_path] (Errno::ENOENT)"
-#
 Chef::Log.info("[Building/Installing latest OpenOCD]")
-remote_file "/tmp/openocd-#{node[:openocd][:version]}.tar.gz" do
+remote_file File.join(cache_path, "openocd-#{node[:openocd][:version]}.tar.gz") do
   source "#{node[:openocd][:mirror]}#{node[:openocd][:version]}/openocd-#{node[:openocd][:version]}.tar.gz"
   notifies :run, "bash[install_openocd]", :immediately
 end
 
 bash "install_openocd" do
   user "root"
-  cwd "/tmp"
+  cwd cache_path
   code <<-EOH
     tar xfz openocd-#{node[:openocd][:version]}.tar.gz
     cd openocd-#{node[:openocd][:version]}
