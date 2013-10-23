@@ -1,5 +1,4 @@
 - Vagrant
- - Add USB Filter in case the JTAG/ST-Link needs it
  - http_proxy needs to be condtional and added to Vagrantfile as well
    - chef.http_proxy = "http://$HOST:$PORT"
    - chef.https_proxy = "http://$HOST:$PORT"
@@ -10,7 +9,6 @@
   - move "--prefix" to "../attributes/default.rb"
 
 - README.md
- - Add Note: Update the submodules before running 'vagrant up'
  - Add Image of the STM32F429
 
 - Source
