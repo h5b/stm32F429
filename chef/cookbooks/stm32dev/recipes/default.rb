@@ -18,7 +18,7 @@ Chef::Log.info("[Adding STM32 Toolchain Packages]")
   package p
 end
 
-Chef::Log.info("[Building/Installing latest OpenOCD]")
+Chef::Log.info("[Installing: latest OpenOCD Release]")
 remote_file File.join(cache_path, "openocd-#{node[:openocd][:version]}.tar.gz") do
   source "#{node[:openocd][:mirror]}#{node[:openocd][:version]}/openocd-#{node[:openocd][:version]}.tar.gz"
   notifies :run, "bash[install_openocd]", :immediately
@@ -35,15 +35,7 @@ bash "install_openocd" do
     EOH
 end
 
-Chef::Log.info("[Adding udev Rule for ST-Link/V2 Programmer]")
-template "/etc/udev/rules.d/30-ftdi-JTAG.rules" do
-  source "30-ftdi-JTAG.rules"
-  mode "0644"
-  owner "root"
-  group "root"
-end
-
-Chef::Log.info("[Adding User 'vagrant' to group 'dialout']")
+Chef::Log.info("[Adding: User 'vagrant' to group 'dialout']")
 group "dialout" do
   action :modify
   members "vagrant"

@@ -1,4 +1,4 @@
-Chef::Log.info("[Adding Repository >>gcc-arm-embedded<<]")
+Chef::Log.info("[Adding: ppa Repository 'gcc-arm-embedded']")
 apt_repository "gcc-arm-embedded" do
   uri "http://ppa.launchpad.net/terry.guo/gcc-arm-embedded/ubuntu/"
   distribution node['lsb']['codename']
@@ -8,9 +8,17 @@ apt_repository "gcc-arm-embedded" do
   action :add
 end
 
-Chef::Log.info("[Customising files in /etc]")
+Chef::Log.info("[Customising: /etc/motd]")
 template "/etc/motd.tail" do
   source "motd.tail"
+  mode "0644"
+  owner "root"
+  group "root"
+end
+
+Chef::Log.info("[Adding: udev Rule for ST-Link/V2 Programmer]")
+template "/etc/udev/rules.d/30-ftdi-JTAG.rules" do
+  source "30-ftdi-JTAG.rules"
   mode "0644"
   owner "root"
   group "root"
