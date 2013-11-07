@@ -6,17 +6,11 @@ environment with VirtualBox and Vagrant.
 
 ![stm32F429](https://github.com/h5b/stm32F429/raw/master/doc/img/stm32f429iDISC.png)
 
-## The Board
-
-* Cortmex-M4
-* 3-Axis Sensor
-* 2.4" QVGA TFT
-
 ## Requirements
 
-* [VirtualBox](https://www.virtualbox.org)
+* [VirtualBox 4.2](https://www.virtualbox.org)
 * [VirtualBox Extension Pack](http://download.virtualbox.org/virtualbox/)
-* [Vagrant](http://vagrantup.com)
+* [Vagrant 1.2](http://vagrantup.com)
 
 ## Toolchain on the Virtual Development Machine
 
