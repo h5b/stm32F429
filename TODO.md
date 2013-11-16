@@ -7,9 +7,6 @@
   - move "configure flags" to "../attributes/default.rb"
   - move "--prefix" to "../attributes/default.rb"
 
-- README.md
- - Add Image of the STM32F429
-
 - Source
  - Add initial build infrastructure (Make and the likes)
  - Add an example project as a starting point

@@ -14,12 +14,12 @@ environment with VirtualBox and Vagrant.
 
 ## Toolchain on the Virtual Development Machine
 
-* git
-* vim
 * gcc-arm-none-eabi
+* git
 * libftdi-dev
 * libusb-1.0-0-dev
 * openocd 0.7.0
+* vim
 
 ## Bootstrapping the Virtual Development Machine
 
