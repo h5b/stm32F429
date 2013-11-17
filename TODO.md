@@ -3,10 +3,6 @@
    - chef.http_proxy = "http://$HOST:$PORT"
    - chef.https_proxy = "http://$HOST:$PORT"
 
-- cookbooks/stm32dev/recipes/default.rb
-  - move "configure flags" to "../attributes/default.rb"
-  - move "--prefix" to "../attributes/default.rb"
-
 - Source
  - Add initial build infrastructure (Make and the likes)
  - Add an example project as a starting point

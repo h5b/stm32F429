@@ -30,7 +30,7 @@ bash "install_openocd" do
   code <<-EOH
     tar xfz openocd-#{node[:openocd][:version]}.tar.gz
     cd openocd-#{node[:openocd][:version]}
-    ./configure --prefix=/usr/local --enable-ft2232_libftdi --enable-stlink --enable-ftdi
+    ./configure #{node[:openocd][:configure_flags]}
     make && make install
     EOH
 end
