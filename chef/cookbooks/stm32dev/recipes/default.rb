@@ -1,6 +1,6 @@
 cache_path  = Chef::Config[:file_cache_path]
 
-Chef::Log.info("[Adding Basic Development Packages]")
+Chef::Log.info("[Adding: Basic Development Packages]")
 [
   "build-essential",
   "git-core",
@@ -9,7 +9,7 @@ Chef::Log.info("[Adding Basic Development Packages]")
   package p
 end
 
-Chef::Log.info("[Adding STM32 Toolchain Packages]")
+Chef::Log.info("[Adding: STM32 Toolchain Packages]")
 [
   "gcc-arm-none-eabi",
   "libftdi-dev",
