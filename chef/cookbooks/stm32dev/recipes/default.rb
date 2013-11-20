@@ -25,13 +25,15 @@ remote_file File.join(cache_path, "openocd-#{node[:openocd][:version]}.tar.gz") 
   notifies :run, "bash[install_openocd]", :immediately
 end
 
+configure_flags = node[:openocd][:configure_flags].join(" ")
+
 bash "install_openocd" do
   user "root"
   cwd cache_path
   code <<-EOH
     tar xfz openocd-#{node[:openocd][:version]}.tar.gz
     cd openocd-#{node[:openocd][:version]}
-    ./configure #{node[:openocd][:configure_flags]}
+    ./configure #{configure_flags}
     make && make install
     EOH
 end
