@@ -14,6 +14,7 @@ template "/etc/motd.tail" do
   mode "0644"
   owner "root"
   group "root"
+  action :create_if_missing
 end
 
 Chef::Log.info("[Adding: udev Rule for ST-Link/V2 Programmer]")
@@ -22,4 +23,5 @@ template "/etc/udev/rules.d/30-ftdi-JTAG.rules" do
   mode "0644"
   owner "root"
   group "root"
+  action :create_if_missing
 end
