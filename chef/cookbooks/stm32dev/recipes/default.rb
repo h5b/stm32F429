@@ -1,9 +1,11 @@
 cache_path  = Chef::Config[:file_cache_path]
 
-Chef::Log.info("[Adding: Basic Development Packages]")
+Chef::Log.info("[Adding: Basic Packages]")
 [
   "build-essential",
   "git-core",
+  "libtool",
+  "pkg-config",
   "vim",
 ].each do |p|
   package p
