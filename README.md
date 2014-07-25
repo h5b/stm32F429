@@ -18,7 +18,7 @@ environment with VirtualBox and Vagrant.
 * git
 * libftdi-dev
 * libusb-1.0-0-dev
-* openocd 0.7.0
+* openocd 0.8.0
 * vim
 
 ## Bootstrapping the Virtual Development Machine
