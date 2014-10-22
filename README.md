@@ -4,7 +4,7 @@ This project is targeted at the development of various code examples for STM's
 STM32F429 Discovery Board while automating the setup process of a development
 environment with VirtualBox and Vagrant.
 
-![stm32F429](https://github.com/h5b/stm32F429/raw/master/doc/img/stm32f429iDISC.png)
+![stm32F429](doc/img/stm32f429iDISC.png)
 
 ## Requirements
 
