@@ -1,5 +1,5 @@
 - Vagrant
- - switch to Opscode's "git" and "vim" cookbook
+ - switch to cookbook chef-stm32
 
 - Source
  - Add initial build infrastructure (make(1) and the likes)

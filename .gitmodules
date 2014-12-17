@@ -4,3 +4,9 @@
 [submodule "libopencm3"]
 	path = libopencm3
 	url = https://github.com/libopencm3/libopencm3.git
+[submodule "chef/cookbooks/vim"]
+	path = chef/cookbooks/vim
+	url = git://github.com/opscode-cookbooks/vim.git
+[submodule "chef/cookbooks/git"]
+	path = chef/cookbooks/git
+	url = git://github.com/opscode-cookbooks/git.git
