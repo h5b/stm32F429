@@ -1,7 +1,5 @@
 - Vagrant
- - http_proxy needs to be conditional and added to Vagrantfile as well
-   - chef.http_proxy = "http://$HOST:$PORT"
-   - chef.https_proxy = "http://$HOST:$PORT"
+ - switch to Opscode's "git" and "vim" cookbook
 
 - Source
  - Add initial build infrastructure (make(1) and the likes)
